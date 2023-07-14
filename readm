@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html Lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://kit.fontawesome.com/ae7654f2c2.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+  <title>Pagediv shop</title>
+</head>
+<style>
+ body {
+  background-image: url("clima.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+           height: 100vh;
+}
+</style>
+<body>
+
+                 <center><button id="myButton">Buy</button></center>
+
+<style>
+  .close-button {
+    position: absolute;
+    top: 120px;
+    right: 15px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+  }
+
+@keyframes twinkleAnimation {
+  0% { box-shadow: 0 0 5px gold; }
+  50% { box-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold; }
+  100% { box-shadow: 0 0 5px gold; }
+}
+
+#bart {
+  width: 500px;
+  border-radius: 100%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 80px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  animation: twinkleAnimation 3s linear infinite;
+}
+
+
+#footerbundy { 
+  position: fixed;
+  background: transparent;
+  bottom: 0;
+  border-radius: 50px;
+  width: 99%;
+  height: 15px;
+  box-shadow: 0 0 30px gold;
+}
+
+#messageField {
+  position: fixed;
+  height: 360px;
+  width: 320px;
+  right: 10px;
+  top: 64%;
+  transform: rotate(-90deg);
+  transform: translateY(-50%);
+  margin-top: 0;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -10px 60px gold;
+}
+
+@media (max-width: 1250px) {
+#nameDisplay {
+  color: white;
+  font-size: 16px;
+  font-family: 'Belanosima', sans-serif;
+  top: -30px;
+}
+}
+
+@media (max-width: 1250px) {
+#horizontalLine {
+width: 286px;
+position: absolute;
+top: 73%;
+right: -113px;
+box-shadow: 0px 0px 10px gold;
+transform: translate(-50%, -50%);
+border-radius: 5px;
+border: none
+}
+}
+
+@media (max-width: 1250px) {
+  #messageField {
+    position: fixed;
+    width: 350px;
+    height: 280px;
+    right: -73px;
+    top: 67%;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    margin-top: -200px;
+    margin-right: 390px;
+    border-radius: 15px;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -10px 60px gold;
+  }
+}
+
+@media (min-width: 1251px) {
+#nameDisplay {
+  color: white;
+  font-family: 'Belanosima', sans-serif;
+  font-size: 18px;
+}
+}
+@media (min-width: 1251px) {
+#horizontalLine {
+width: 323px;
+height: -60px;
+border-top: 230px solid rgba(0, 0, 0, 0.2);
+position: absolute;
+top: 73%;
+right: -138px;
+transform: translate(-50%, -50%);
+box-shadow: 0px 0px 10px gold;
+border-radius: 5px;
+border: none;
+}
+}
+
+@media (max-width: 1250px) {
+#basketIcon {
+  font-size: 30px;
+  color: gold;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+}
+@media (min-width: 1251px) {
+#basketIcon {
+  font-size: 40px;
+  color: gold;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+ }
+ }
+@keyframes shakeAnimation {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-once {
+  animation: shakeAnimation 0.5s;
+  animation-iteration-count: 1;
+}
+
+#bobbyText {
+  font-family: 'Caprasimo', cursive;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  animation: pulsate 2s infinite;
+  text-shadow: 0 0 8px gold;
+}
+
+@keyframes pulsate {
+  0% {
+    text-shadow: 0 0 8px gold;
+  }
+  50% {
+    text-shadow: 0 0 30px gold;
+  }
+  100% {
+    text-shadow: 0 0 8px gold;
+  }
+}
+
+#footerImage {
+height: 60px;
+ position: relative;
+  top: -12px;
+}
+
+</style>
+
+<script>
+function openPage() {
+  var pageDiv = document.createElement("div");
+  pageDiv.className = "page";
+  pageDiv.style.background = "rgba(0, 0, 0, 0.7)";
+  pageDiv.style.border = "1px solid gold";
+  pageDiv.style.boxShadow = "inset 0 0 30px gold";
+
+  var footerDiv = document.createElement("div");
+  footerDiv.className = "footer";
+  footerDiv.style.padding = "10px";
+  footerDiv.style.textAlign = "center";
+  // Adicionar um ID ao footer
+  footerDiv.id = "footerbundy";
+
+  var basketIcon = document.createElement("i");
+  basketIcon.className = "fas fa-shopping-basket basket-icon";
+  basketIcon.id = "basketIcon"; 
+  basketIcon.style.border = "2px solid white";
+  basketIcon.style.borderRadius = "50%";
+  basketIcon.style.padding = "15px"; 
+  basketIcon.style.boxShadow = "0 0 15px gold";
+
+  basketIcon.classList.add("shake-once");
+
+  pageDiv.appendChild(basketIcon);
+
+  var messageField = document.createElement("textarea");
+  messageField.id = "messageField";
+  messageField.style.overflow = "hidden";
+  messageField.style.userSelect = "none";
+  messageField.readOnly = true; 
+  messageField.style.borderColor = "gold";
+  messageField.style.borderWidth = "3px"; 
+  messageField.style.boxShadow = "0 0 30px gold";
+ 
+var lineContainer = document.createElement("div");
+lineContainer.className = "line-container";
+ 
+var lineElement = document.createElement("hr");
+lineElement.id = "horizontalLine";
+
+lineElement.style.borderTop = "230px solid rgba(0, 0, 0, 0.2)";
+
+
+pageDiv.appendChild(lineElement);
+
+pageDiv.appendChild(lineContainer);
+
+  footerDiv.appendChild(messageField);
+  
+  pageDiv.appendChild(footerDiv);
+
+  var navbarDiv = document.createElement("nav");
+  navbarDiv.className = "navbar";
+  navbarDiv.id = "bart";
+
+  var bobbyText = document.createElement("span");
+  bobbyText.innerText = "Financial Store";
+  bobbyText.className = "navbar-item";
+  bobbyText.id = "bobbyText"; 
+  navbarDiv.appendChild(bobbyText);
+  bobbyText.style.fontSize = "30px";
+  bobbyText.style.wordSpacing = "5px"; 
+  bobbyText.style.animation = "pulsate 2s infinite"; 
+
+  // Adicionar a navbar à página
+  pageDiv.appendChild(navbarDiv);
+
+  var containerDiv = document.createElement("div");
+  containerDiv.className = "container";
+
+  var buyButton = document.createElement("button");
+  buyButton.innerText = "add to cart";
+  buyButton.className = "buy-button";
+ 
+  function closePage() {
+    // Remover o elemento da página atual
+    if (pageDiv && pageDiv.parentNode) {
+      pageDiv.parentNode.removeChild(pageDiv);
+      document.body.style.overflow = "auto";
+    }
+  }
+
+  pageDiv.appendChild(containerDiv);
+
+
+  document.body.appendChild(pageDiv);
+  document.body.style.overflow = "hidden";
+
+  pageDiv.style.transform = "translateY(100%)";
+  setTimeout(function () {
+    pageDiv.style.transform = "translateY(0)";
+  }, 100);
+
+
+  var nameDisplay = document.createElement("div");
+  nameDisplay.id = "nameDisplay";
+  nameDisplay.style.height = "350px";
+  nameDisplay.style.width = "250px";
+  nameDisplay.style.overflowY = "scroll";
+  nameDisplay.style.position = "fixed";
+  nameDisplay.style.top = "45%";
+  nameDisplay.style.right = "48px";
+  nameDisplay.style.transform = "translateY(-50%)";
+  nameDisplay.style.zIndex = "9999";
+
+
+  footerDiv.appendChild(nameDisplay);
+
+  function addRandomName() {
+var names = ["projects","projects","projects"];
+ var randomName = names[Math.floor(Math.random() * names.length)];
+
+    var nameElement = document.createElement("div");
+    nameElement.innerText = randomName;
+
+       nameElement.style.boxShadow = "0 0 4px rgba(255, 255, 255, 0.5)";
+       nameElement.style.borderRight = "2px solid gold";
+       nameElement.style.borderTop = "2px solid gold";
+       nameElement.style.borderBottom = "2px solid gold";
+       nameElement.style.borderLeft = "2px solid gold";
+       nameElement.style.background = "rgba(0, 0, 0, 0.4)";
+       nameElement.style.borderRadius = "10px"; 
+       nameElement.style.marginBottom = "10px";
+       
+    
+    nameElement.style.transform = "translateY(100%)";
+    setTimeout(function () {
+      nameElement.style.transform = "translateY(0)";
+    }, 100);
+
+    nameDisplay.appendChild(nameElement);
+
+    // Fazer a rolagem do elemento de exibição de nomes para o topo
+    nameDisplay.scrollTop = 0;
+
+    setTimeout(function () {
+      nameElement.style.opacity = "0";
+      nameElement.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.7)";
+      setTimeout(function () {
+        nameDisplay.removeChild(nameElement);
+      }, 500); 
+    }, 3000);
+  }
+
+addRandomName();
+
+
+  setInterval(addRandomName, 1000);
+}
+
+var myButton = document.getElementById("myButton");
+myButton.addEventListener("click", openPage);
+</script>
+</body>
+</html>
